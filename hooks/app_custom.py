@@ -21,7 +21,7 @@ def configure(*args,**kwargs):
         log('Unable to locate any hosts to deploy product data to', 'Product Data')
         raise ValueError('No hosts found to deploy product data to')
      ip = list(set(hosts))
-     f = open('tomcat7/hosts', 'w')
+     f = open('hosts', 'w')
      print >> f,"[webservers]"
      for host in hosts:
      	#print(host)
