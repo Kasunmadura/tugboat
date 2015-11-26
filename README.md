@@ -1,4 +1,4 @@
- All,
+Hi All,
 
 This "configure" function use as new tugboat function. so using that you can get current version relate all server ip list to hosts file.Using that you can run any ansible playbook.
 
@@ -9,8 +9,8 @@ linkedin:https://lk.linkedin.com/in/kasunmadurarathnayaka
 
 ==Guide Line==
 
-* Get clone  
-* Add above config to ____init_ _.py
+* Get clone
+* Add below config to ____init_ _.py (only add "configure" end of _ _ all _ )
 
   
 
@@ -18,7 +18,7 @@ linkedin:https://lk.linkedin.com/in/kasunmadurarathnayaka
 
    
 import_hooks(os.path.dirname(__file__))
-    
+
     @fabric.api.task
     def configure(*args, **kwargs):
         sys.modules.get('hooks.app_custom').configure(*args, **kwargs)
